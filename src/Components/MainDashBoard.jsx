@@ -6,37 +6,39 @@ import UpcomingSchedule from "./UpcomingSchedule";
 
 const DashboardMainContent = () => {
   return (
-    <div className="flex-1 bg-gray-50 p-6">
+    <div className="flex-1 bg-gray-50 p-4 sm:p-5 md:p-6">
+      {/* Header */}
       <div className="mb-6">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-2">
           <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
           <div className="text-sm text-gray-500">This Week</div>
         </div>
       </div>
-      
-      <div className="grid grid-cols-12 gap-6">
-        {/* Left Section - Anatomy */}
-        <div className="col-span-4 -mt-3">
+
+      {/* Grid Content */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6">
+        {/* Anatomy Section */}
+        <div className="lg:col-span-4 sm:col-span-2 col-span-1">
           <AnatomySection />
         </div>
-        
-        {/* Middle Section - Health Cards */}
-        <div className="col-span-3 -mt-3">
+
+        {/* Health Cards */}
+        <div className="lg:col-span-3 sm:col-span-2 col-span-1">
           <HealthStatusCards />
         </div>
-        
-        {/* Right Section - Calendar */}
-        <div className="col-span-5 -mt-3 bg-blue-50">
+
+        {/* Calendar */}
+        <div className="lg:col-span-5 sm:col-span-2 col-span-1 bg-blue-50">
           <CalendarView />
         </div>
-        
-        {/* Bottom Left - Activity */}
-        <div className="col-span-7 -mt-3">
+
+        {/* Activity Feed */}
+        <div className="lg:col-span-7 sm:col-span-2 col-span-1">
           <ActivityFeed />
         </div>
-        
-        {/* Bottom Right - Upcoming Schedule */}
-        <div className="col-span-5 -mt-18 bg-blue-50">
+
+        {/* Upcoming Schedule */}
+        <div className="lg:col-span-5 sm:col-span-2 col-span-1 bg-blue-50">
           <UpcomingSchedule />
         </div>
       </div>
@@ -45,3 +47,4 @@ const DashboardMainContent = () => {
 };
 
 export default DashboardMainContent;
+
